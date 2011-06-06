@@ -79,8 +79,12 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  profile     enable or disable internal profiling               TRUE
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
+
+//this is a convention that eases things for us, but doesn't break interoperability of the mop modules
+$path = substr($_SERVER['SCRIPT_NAME'],0,-9);
+
 Kohana::init(array(
-	'base_url'   => '/',
+  'base_url'   => $path,
 ));
 
 /**
@@ -97,15 +101,29 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
+	'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+	'database'   => MODPATH.'database',   // Database access
+	'image'      => MODPATH.'image',      // Image manipulation
+	'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	));
+
+
+	//Enable MoPLib Modules
+	'mopcms' => 'moplib/mopcms',
+	'mopcore' => 'moplib/mopcore',
+	'mopjs'  => 'moplib/mopjs',
+	'mopextras'  => 'moplib/mopextras',
+	'tools' => 'moplib/tools',
+	'mopfrontend' => 'moplib/mopfrontend',
+	'navigation' => 'moplib/navigation',
+	'mopui' => 'moplib/mopui',
+	'mopauth' => 'moplib/mopauth',
+	'usermanagement' => 'moplib/usermanagement',
+)
+);
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
