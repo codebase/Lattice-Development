@@ -101,17 +101,8 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	'database'   => MODPATH.'database',   // Database access
-	'image'      => MODPATH.'image',      // Image manipulation
-	'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-
-
-	//Enable MoPLib Modules
+	//Enable MoPLib Modules, and allow them to override standard modules
+   'rootgraph' => 'moplib/rootgraph',
 	'mopcms' => 'moplib/mopcms',
 	'mopcore' => 'moplib/mopcore',
 	'mopjs'  => 'moplib/mopjs',
@@ -122,7 +113,20 @@ Kohana::modules(array(
 	'mopui' => 'moplib/mopui',
 	'mopauth' => 'moplib/mopauth',
 	'usermanagement' => 'moplib/usermanagement',
-)
+
+
+
+	'auth'       => MODPATH.'auth',       // Basic authentication
+	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
+	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
+	'database'   => MODPATH.'database',   // Database access
+	'image'      => MODPATH.'image',      // Image manipulation
+	'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+	// 'unittest'   => MODPATH.'unittest',   // Unit testing
+	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+
+
+	)
 );
 
 /**
