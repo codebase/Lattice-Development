@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php 
 
 // -- Environment setup --------------------------------------------------------
 
@@ -146,4 +146,3 @@ Route::set('default', '(<controller>(/<action>(/<id>)))')
 
 
 
-}
