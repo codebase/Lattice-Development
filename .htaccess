@@ -12,12 +12,12 @@ RewriteEngine On
 </Files>
 
 
+RewriteRule ^application/media/* - [PT,L]
 # Protect application and system files from being viewed
 RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
 
 
 RewriteRule ^(crossdomain.xml|index.php|robots.txt|favicon.ico) - [PT,L]
-RewriteRule ^application/media/* - [PT,L]
 
 
 # Allow css and js to be displayed directly
