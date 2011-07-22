@@ -27,4 +27,4 @@
 	url = http://github.com/kohana/unittest.git
 [submodule "moplib"]
 	path = moplib
-	url = git@github.com:codebase/MoPLib-3.0.git
+	url = git@github.com:codebase/lattice-3.0.git
