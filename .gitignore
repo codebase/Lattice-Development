@@ -9,3 +9,4 @@ kohana_release
 nbproject
 build
 application/config/database.php
+application/media/*
