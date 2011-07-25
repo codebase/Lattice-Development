@@ -102,18 +102,18 @@ Kohana::$config->attach(new Config_File);
  */
 Kohana::modules(array(
 	//Enable MoPLib Modules, and allow them to override standard modules
-   'rootgraph' => 'moplib/rootgraph',
-	'mopcms' => 'moplib/mopcms',
+	'kohanaLattice' => 'moplib/kohana',
+	'mopauth' => 'moplib/mopauth',
 	'mopcore' => 'moplib/mopcore',
 	'mopjs'  => 'moplib/mopjs',
+	'rootgraph' => 'moplib/rootgraph',
+	'mopui' => 'moplib/mopui',
+	'mopcms' => 'moplib/mopcms',
 	'mopextras'  => 'moplib/mopextras',
 	'tools' => 'moplib/tools',
 	'mopfrontend' => 'moplib/mopfrontend',
 	'navigation' => 'moplib/navigation',
-	'mopui' => 'moplib/mopui',
-	'mopauth' => 'moplib/mopauth',
 	'usermanagement' => 'moplib/usermanagement',
-	'kohana' => 'moplib/kohana',
 
 
 
