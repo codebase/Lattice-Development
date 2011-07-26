@@ -13,9 +13,6 @@ RewriteEngine On
 
 
 RewriteRule ^application/media/* - [PT,L]
-# Protect application and system files from being viewed
-RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
-
 
 RewriteRule ^(crossdomain.xml|index.php|robots.txt|favicon.ico) - [PT,L]
 
@@ -30,6 +27,10 @@ RewriteRule ^(.*)swf$ - [PT,L]
 RewriteRule ^(.*)flv$ - [PT,L]
 RewriteRule ^(.*)f4v$ - [PT,L]
 RewriteRule ^(.*)pdf$ - [PT,L]
+
+# Protect application and system files from being viewed
+RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
+
 
 
 # Rewrite all other URLs to index.php/URL
