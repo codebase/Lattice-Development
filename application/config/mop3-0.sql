@@ -421,7 +421,7 @@ DROP TABLE IF EXISTS `objectmaps`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `objectmaps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `template_id` int(11) NOT NULL,
+  `objectType_id` int(11) NOT NULL,
   `type` enum('field','flag','file','object') CHARACTER SET latin1 NOT NULL,
   `index` int(11) NOT NULL,
   `column` varchar(100) CHARACTER SET latin1 NOT NULL,
@@ -448,7 +448,7 @@ DROP TABLE IF EXISTS `pages`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `template_id` int(11) NOT NULL DEFAULT '0',
+  `objectType_id` int(11) NOT NULL DEFAULT '0',
   `parentid` int(11) DEFAULT NULL,
   `collection_id` int(11) DEFAULT NULL,
   `slug` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
@@ -528,15 +528,15 @@ INSERT INTO `roles_users` VALUES (5,1),(5,2);
 UNLOCK TABLES;
 
 --
--- Table structure for table `templates`
+-- Table structure for table `objectTypes`
 --
 
-DROP TABLE IF EXISTS `templates`;
+DROP TABLE IF EXISTS `objectTypes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `templates` (
+CREATE TABLE `objectTypes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `templatename` varchar(50) CHARACTER SET latin1 NOT NULL DEFAULT '',
+  `objectTypename` varchar(50) CHARACTER SET latin1 NOT NULL DEFAULT '',
   `contenttable` varchar(50) CHARACTER SET latin1 DEFAULT NULL,
   `nodeType` varchar(50) CHARACTER SET latin1 DEFAULT NULL,
   `contentType` varchar(20) CHARACTER SET latin1 DEFAULT NULL,
@@ -546,13 +546,13 @@ CREATE TABLE `templates` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `templates`
+-- Dumping data for table `objectTypes`
 --
 
-LOCK TABLES `templates` WRITE;
-/*!40000 ALTER TABLE `templates` DISABLE KEYS */;
-INSERT INTO `templates` VALUES (1,'basicCategory',NULL,'object',NULL,NULL),(2,'singleIPE',NULL,'object',NULL,NULL),(3,'singleDate',NULL,'object',NULL,NULL),(4,'singleFile',NULL,'object',NULL,NULL),(5,'multilineIPE',NULL,'object',NULL,NULL),(6,'singleRadioGroup',NULL,'object',NULL,NULL),(7,'singleCheckbox',NULL,'object',NULL,NULL),(8,'singleTime',NULL,'object',NULL,NULL),(9,'singleImage',NULL,'object',NULL,NULL),(10,'simpleListModule',NULL,'object',NULL,NULL),(11,'simplelist',NULL,'container',NULL,NULL),(12,'simpleListModuleItem',NULL,'object',NULL,NULL),(13,'complexListModule',NULL,'object',NULL,NULL),(14,'complexList',NULL,'container',NULL,NULL),(15,'imageListModule',NULL,'object',NULL,NULL),(16,'imageList',NULL,'container',NULL,NULL),(17,'fileListModule',NULL,'object',NULL,NULL),(18,'fileList',NULL,'container',NULL,NULL),(19,'singleAssociator',NULL,'object',NULL,NULL),(20,'linkTest',NULL,'object',NULL,NULL),(21,'link',NULL,'object',NULL,NULL);
-/*!40000 ALTER TABLE `templates` ENABLE KEYS */;
+LOCK TABLES `objectTypes` WRITE;
+/*!40000 ALTER TABLE `objectTypes` DISABLE KEYS */;
+INSERT INTO `objectTypes` VALUES (1,'basicCategory',NULL,'object',NULL,NULL),(2,'singleIPE',NULL,'object',NULL,NULL),(3,'singleDate',NULL,'object',NULL,NULL),(4,'singleFile',NULL,'object',NULL,NULL),(5,'multilineIPE',NULL,'object',NULL,NULL),(6,'singleRadioGroup',NULL,'object',NULL,NULL),(7,'singleCheckbox',NULL,'object',NULL,NULL),(8,'singleTime',NULL,'object',NULL,NULL),(9,'singleImage',NULL,'object',NULL,NULL),(10,'simpleListModule',NULL,'object',NULL,NULL),(11,'simplelist',NULL,'container',NULL,NULL),(12,'simpleListModuleItem',NULL,'object',NULL,NULL),(13,'complexListModule',NULL,'object',NULL,NULL),(14,'complexList',NULL,'container',NULL,NULL),(15,'imageListModule',NULL,'object',NULL,NULL),(16,'imageList',NULL,'container',NULL,NULL),(17,'fileListModule',NULL,'object',NULL,NULL),(18,'fileList',NULL,'container',NULL,NULL),(19,'singleAssociator',NULL,'object',NULL,NULL),(20,'linkTest',NULL,'object',NULL,NULL),(21,'link',NULL,'object',NULL,NULL);
+/*!40000 ALTER TABLE `objectTypes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

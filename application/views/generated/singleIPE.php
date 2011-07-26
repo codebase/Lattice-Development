@@ -6,9 +6,9 @@
 
 <p class="ssdfasdfingleIPE2"> <?=$content['main']['ssdfasdfingleIPE2'];?></p>
 
-<p class="ssdfasd fasdfasdfingleIPE2"> <?=$content['main']['ssdfasd fasdfasdfingleIPE2'];?></p>
+<p class="ssdfasdfasdfasdfingleIPE2"> <?=$content['main']['ssdfasdfasdfasdfingleIPE2'];?></p>
 
-<p class="leIsdasdasdfasdsdf asdfPE2"> <?=$content['main']['leIsdasdasdfasdsdf asdfPE2'];?></p>
+<p class="maritnagus"> <?=$content['main']['maritnagus'];?></p>
 
-<p class="leIasdfasdffPE2"> <?=$content['main']['leIasdfasdffPE2'];?></p>
+<p class="lagunea"> <?=$content['main']['lagunea'];?></p>
 

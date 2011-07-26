@@ -25,6 +25,6 @@
 [submodule "modules/unittest"]
 	path = modules/unittest
 	url = http://github.com/kohana/unittest.git
-[submodule "moplib"]
-	path = moplib
+[submodule "lattice"]
+	path = lattice
 	url = git@github.com:codebase/lattice-3.0.git
