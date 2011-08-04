@@ -102,7 +102,7 @@ Kohana::$config->attach(new Config_File);
  */
 Kohana::modules(array(
 	//Enable MoPLib Modules, and allow them to override standard modules
-	'kohanaLattice' => 'lattice/kohana',
+	'lattice' => 'lattice/lattice',
 	'mopauth' => 'lattice/mopauth',
 	'mopcore' => 'lattice/mopcore',
 	'mopjs'  => 'lattice/mopjs',
