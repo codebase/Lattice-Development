@@ -114,6 +114,7 @@ Kohana::modules(array(
 	'mopfrontend' => 'lattice/mopfrontend',
 	'navigation' => 'lattice/navigation',
 	'usermanagement' => 'lattice/usermanagement',
+	'testing' => 'lattice/latticetests',
 
 
 
