@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="ntvb-v4" default="pull">
+
+  <target name="checkout">
+    <exec executable="git">
+      <arg value="submodule"/>
+      <arg value="init"/>
+    </exec>
+    <exec executable="git">
+      <arg value="submodule"/>
+      <arg value="update"/>
+    </exec>
+    <ant target="setup"/>
+  </target>
+
+  <target name="setup">
+    <chmod dir="application/cache" perm="777"/>
+    <chmod dir="application/logs" perm="777"/>
+    <mkdir dir="application/media"/> 
+    <chmod dir="application/media" perm="777"/>
+    <mkdir dir="upload"/> 
+    <chmod dir="upload" perm="777"/>
+  </target>
+
+  <target name="pull">
+    <exec executable="git">
+      <arg value="pull"/>
+    </exec>
+    <exec executable="git" dir="lattice">
+      <arg value="pull"/>
+    </exec>  
+    <exec executable="git" dir="ntvbmodules">
+      <arg value="pull"/>
+    </exec>  
+  </target>
+
+	<target name="golive-4-0-1">
+
+	</target>
+
+	<target name="deepwinter-reverttestbed">
+		<!--
+		<sshexec host="dev2.winterroot.net" username="deepwinter" command="/home/deepwinter/scripts/dumpNtvbTestbed.sh"/>
+		<scp file="deepwinter@dev2.winterroot.net:ntvb4_testbed.sql" todir="."/>
+		-->
+		<exec executable="ssh">
+			<arg value="deepwinter@dev2.winterroot.net"/>
+			<arg value="/home/deepwinter/scripts/dumpNtvbTestbed.sh"/>
+		</exec>
+		<exec executable="scp">
+			<arg value="deepwinter@dev2.winterroot.net:ntvb4_testbed.sql"/>
+			<arg value="."/>
+		</exec>
+		<exec executable="/bin/sh">
+			<arg value="mysql -u root -proot ntvb4_dev %lt ntvb4_testbed.sql"/>
+		</exec>
+	</target>
+
+</project>
