@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="ntvb-v4" default="pull">
+<project name="latticesite" default="pull">
 
   <target name="checkout">
     <exec executable="git">
@@ -37,26 +37,12 @@
     </exec>  
   </target>
 
-	<target name="golive-4-0-1">
+  <target name="test">                                                                                                
+    <exec executable="phpunit">                                                                                       
+      <arg value="--configuration=application/tests/phpunit.xml"/>                                                    
+    </exec>                                                                                                           
+  </target>
 
-	</target>
-
-	<target name="deepwinter-reverttestbed">
-		<!--
-		<sshexec host="dev2.winterroot.net" username="deepwinter" command="/home/deepwinter/scripts/dumpNtvbTestbed.sh"/>
-		<scp file="deepwinter@dev2.winterroot.net:ntvb4_testbed.sql" todir="."/>
-		-->
-		<exec executable="ssh">
-			<arg value="deepwinter@dev2.winterroot.net"/>
-			<arg value="/home/deepwinter/scripts/dumpNtvbTestbed.sh"/>
-		</exec>
-		<exec executable="scp">
-			<arg value="deepwinter@dev2.winterroot.net:ntvb4_testbed.sql"/>
-			<arg value="."/>
-		</exec>
-		<exec executable="/bin/sh">
-			<arg value="mysql -u root -proot ntvb4_dev %lt ntvb4_testbed.sql"/>
-		</exec>
-	</target>
+</project>
 
 </project>
