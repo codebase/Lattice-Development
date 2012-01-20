@@ -11,3 +11,5 @@ $config = array(
 
 $config['layout'] = 'LayoutLogin';
 $config['redirect'] = 'cms';
+
+return $config;
