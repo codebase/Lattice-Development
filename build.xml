@@ -23,6 +23,7 @@
     <chmod dir="application/export" perm="777"/>
     <mkdir dir="upload"/> 
     <chmod dir="upload" perm="777"/>
+    <copy file="modules/database/config/database.php" tofile="application/config/database.php"/>
   </target>
 
   <target name="pull">
