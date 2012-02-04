@@ -33,9 +33,6 @@
     <exec executable="git" dir="lattice">
       <arg value="pull"/>
     </exec>  
-    <exec executable="git" dir="ntvbmodules">
-      <arg value="pull"/>
-    </exec>  
   </target>
 
   <target name="test">                                                                                                
@@ -44,5 +41,10 @@
     </exec>                                                                                                           
   </target>
 
+  <target name="testlattice">                                                                                                
+    <exec executable="phpunit">                                                                                       
+      <arg value="--configuration=lattice/lattice/devtools/tests/phpunit.xml"/>                                                    
+    </exec>                                                                                                           
+  </target>
 </project>
 

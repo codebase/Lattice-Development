@@ -102,17 +102,14 @@ Kohana::$config->attach(new Config_File);
  */
 Kohana::modules(array(
 	//Enable LatticeLib Modules, and allow them to override standard modules
-	'lattice' => 'lattice/lattice',
-	'latticeauth' => 'lattice/latticeauth',
-	'latticecore' => 'lattice/latticecore',
-	'latticejs'  => 'lattice/latticejs',
-	'latticeui' => 'lattice/latticeui',
-	'latticeextras'  => 'lattice/latticeextras',
-	'testbed' => 'lattice/testbed',
-	'latticeviews' => 'lattice/latticeviews',
-	'navigation' => 'lattice/navigation',
-	'usermanagement' => 'lattice/usermanagement',
-	'latticeviews' => 'lattice/latticeviews',
+	'lattice' => LATTICEPATH.'lattice',
+	'latticeauth' => LATTICEPATH.'latticeauth',
+	'latticeui' => LATTICEPATH.'latticeui',
+	'testbed' => LATTICEPATH.'testbed',
+	'latticeviews' => LATTICEPATH.'latticeviews',
+	'navigation' => LATTICEPATH.'navigation',
+	'usermanagement' => LATTICEPATH.'usermanagement',
+	'latticeviews' => LATTICEPATH.'latticeviews',
 	'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
@@ -127,15 +124,12 @@ Kohana::modules(array(
 //check for setup
 Lattice_Initializer::check(
 	array(
-		'rootgraph',
     'lattice',
     'cms',
-    'latticecms',
     'latticeauth',
     'latticetests',
     'usermanagement',
     'testing',
-    'defaultusers',
 	)
 );
 

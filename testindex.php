@@ -73,9 +73,6 @@ define('APPPATH', realpath($application).DIRECTORY_SEPARATOR);
 define('MODPATH', realpath($modules).DIRECTORY_SEPARATOR);
 define('SYSPATH', realpath($system).DIRECTORY_SEPARATOR);
 
-//directory for NTVB modules
-define('NTVBMODPATH', realpath(DOCROOT.'ntvbmodules').DIRECTORY_SEPARATOR);
-
 define('LATTICEPATH', realpath(DOCROOT.'lattice').DIRECTORY_SEPARATOR);
 
 // Clean up the configuration vars
