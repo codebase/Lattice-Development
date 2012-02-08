@@ -11,6 +11,11 @@
       <arg value="submodule"/>
       <arg value="update"/>
     </exec>
+    </exec>
+    <exec executable="git" dir="lattice">
+      <arg value="checkout"/>
+      <arg value="master"/>
+    </exec>
     <ant target="setup"/>
   </target>
 
