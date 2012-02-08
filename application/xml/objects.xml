@@ -21,6 +21,14 @@
 			</elements>
 		</objectType>
 
+    <objectType name="editorOnlyObjectType" contentType="document" allowDelete="true" initialAccessRoles="editor" />
+
+    <objectType name="singleAssociator" contentType="document" allowDelete="true" >
+      <elements>
+        <associator name="myAssociation" label="My Association" lattice="myAssociation" />
+      </elements>
+    </objectType>
+
   </objectTypes>
 
 </configuration>
