@@ -121,19 +121,6 @@ Kohana::modules(array(
 	)
 );
 
-//check for setup
-Lattice_Initializer::check(
-	array(
-    'lattice',
-    'cms',
-    'latticeauth',
-    'latticetests',
-    'usermanagement',
-    'testing',
-	)
-);
-
-
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
