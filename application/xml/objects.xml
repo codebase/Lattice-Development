@@ -25,7 +25,9 @@
 
     <objectType name="singleAssociator" contentType="document" allowDelete="true" >
       <elements>
-        <associator name="myAssociation" label="My Association" lattice="myAssociation" metaObjectTypeName="meta" />
+        <associator name="myAssociation" label="My Association" lattice="myAssociation" metaObjectTypeName="meta" >
+          <filter objectTypeName="article"/>
+        </associator>
       </elements>
     </objectType>
 
