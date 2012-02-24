@@ -25,6 +25,8 @@
     <chmod dir="application/media" perm="777"/>
     <mkdir dir="application/export"/> 
     <chmod dir="application/export" perm="777"/>
+    <mkdir dir="application/views/generated"/> 
+    <chmod dir="application/views/generated" perm="777"/>
     <mkdir dir="upload"/> 
     <chmod dir="upload" perm="777"/>
   </target>
