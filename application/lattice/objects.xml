@@ -40,6 +40,14 @@
       </elements>
     </objectType>
 
+    <objectType name="defaultsText">
+      <elements>
+        <date name="dateField" label="Date" default="now"/>
+        <date name="dateFieldNoDefault" label="Date No" />
+        <text name="textFieldDefault" label="Txt" default="Some Default Text"/>
+        <text name="textFieldNoDefault" label="Txt 2"/>
+      </elements>
+
   </objectTypes>
 
 </configuration>
