@@ -34,6 +34,12 @@
     <objectType name="meta">
     </objectType>
 
+    <objectType name="clusterTest">
+      <elements>
+        <link name="myLink" label="My Link"/>
+      </elements>
+    </objectType>
+
   </objectTypes>
 
 </configuration>
