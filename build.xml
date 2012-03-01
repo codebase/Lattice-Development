@@ -39,6 +39,10 @@
     <chmod dir="upload" perm="777"/>
   </target>
 
+  <target name="init">
+    <copy file="modules/database/config/database.php" tofile="application/config"/>
+  </target>
+
   <target name="pull">
     <exec executable="git">
       <arg value="pull"/>
@@ -58,6 +62,17 @@
     <exec executable="phpunit">                                                                                       
       <arg value="--configuration=lattice/lattice/devtools/tests/phpunit.xml"/>                                                    
     </exec>                                                                                                           
+  </target>
+
+  <target name="clean">
+    <exec executable="php">
+      <arg value="index.php"/>
+      <arg value="--uri=builder/initializeSite/empty"/>
+    </exec>
+  </target>
+
+  <target name="onetest">
+    <exec name="phpunit --bootstrap testindex.php GraphTest lattice/lattice/devtools/tests/classes/GraphTest.php "/>
   </target>
 </project>
 
