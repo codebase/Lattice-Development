@@ -49,6 +49,12 @@
       </elements>
     </objectType>
 
+    <objectType name="prevNext">
+      <elements>
+        <date name="postDate" label="Date" />
+      </elements>
+    </objectType>
+
   </objectTypes>
 
 </configuration>

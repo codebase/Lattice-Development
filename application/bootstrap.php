@@ -102,14 +102,7 @@ Kohana::$config->attach(new Config_File);
  */
 Kohana::modules(array(
 	//Enable LatticeLib Modules, and allow them to override standard modules
-	'lattice' => LATTICEPATH.'lattice',
-	'latticeauth' => LATTICEPATH.'latticeauth',
-	'latticeui' => LATTICEPATH.'latticeui',
-	'testbed' => LATTICEPATH.'testbed',
-	'latticeviews' => LATTICEPATH.'latticeviews',
-	'navigation' => LATTICEPATH.'navigation',
-	'usermanagement' => LATTICEPATH.'usermanagement',
-	'latticeviews' => LATTICEPATH.'latticeviews',
+	'lattice' => MODPATH.'lattice',
 	'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
