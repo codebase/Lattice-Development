@@ -60,7 +60,7 @@
 
   <target name="testlattice">                                                                                                
     <exec executable="phpunit">                                                                                       
-      <arg value="--configuration=lattice/lattice/devtools/tests/phpunit.xml"/>                                                    
+      <arg value="--configuration=modules/lattice/devtools/tests/phpunit.xml"/>                                                    
     </exec>                                                                                                           
   </target>
 
