@@ -47,14 +47,18 @@
     <exec executable="git">
       <arg value="pull"/>
     </exec>
-    <exec executable="git" dir="modules/lattice">
-      <arg value="pull"/>
-    </exec>  
     <exec executable="git">
       <arg value="submodule"/>
       <arg value="update"/>
       <arg value="--recursive"/>
     </exec>
+    <exec executable="git" dir="modules/lattice">
+      <arg value="checkout"/>
+      <arg value="master"/>
+    </exec>  
+    <exec executable="git" dir="modules/lattice">
+      <arg value="pull"/>
+    </exec>  
   </target>
 
   <target name="test">                                                                                                
