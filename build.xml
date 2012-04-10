@@ -50,6 +50,11 @@
     <exec executable="git" dir="lattice">
       <arg value="pull"/>
     </exec>  
+    <exec executable="git">
+      <arg value="submodule"/>
+      <arg value="update"/>
+      <arg value="--recursive"/>
+    </exec>
   </target>
 
   <target name="test">                                                                                                
