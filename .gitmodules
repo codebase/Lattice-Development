@@ -27,4 +27,4 @@
 	url = git@github.com:kohana/unittest.git
 [submodule "modules/lattice"]
 	path = modules/lattice
-	url = https://github.com/deepwinter
+	url = git@github.com:deepwinter/lattice.git 
