@@ -10,6 +10,7 @@
     <exec executable="git">
       <arg value="submodule"/>
       <arg value="update"/>
+      <arg value="--recursive"/>
     </exec>
     <ant target="setup"/>
   </target>
