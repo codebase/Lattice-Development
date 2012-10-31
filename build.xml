@@ -28,7 +28,7 @@
   </target>
 
   <target name="init">
-    <copy file="modules/database/config/database.php" tofile="application/config"/>
+    <copy file="modules/database/config/database.php" tofile="application/config/database.php"/>
   </target>
 
   <target name="pull">
