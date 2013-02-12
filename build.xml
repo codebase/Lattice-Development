@@ -12,11 +12,11 @@
       <arg value="update"/>
       <arg value="--recursive"/>
     </exec>
-    <exec executable="get" dir="modules/lattice" failonerror="true">
+    <exec executable="git" dir="modules/lattice" failonerror="true">
       <arg value="submodule"/>
       <arg value="init"/>
     </exec>
-    <exec executable="get" dir="modules/lattice" failonerror="true">
+    <exec executable="git" dir="modules/lattice" failonerror="true">
       <arg value="submodule"/>
       <arg value="update"/>
       <arg value="--recursive"/>
