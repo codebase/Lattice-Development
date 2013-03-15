@@ -10,12 +10,11 @@
     <exec executable="git" failonerror="true">
       <arg value="submodule"/>
       <arg value="update"/>
-      <arg value="--recursive"/>
     </exec>
     <exec executable="git" dir="modules/lattice" failonerror="true">
-      <arg value="submodule"/>
-      <arg value="init"/>
-    </exec>
+      <arg value="checkout"/>
+      <arg value="stable"/>
+    </exec>  
     <exec executable="git" dir="modules/lattice" failonerror="true">
       <arg value="submodule"/>
       <arg value="update"/>
@@ -48,15 +47,18 @@
     <exec executable="git" failonerror="true">
       <arg value="submodule"/>
       <arg value="update"/>
-      <arg value="--recursive"/>
     </exec>
     <exec executable="git" dir="modules/lattice" failonerror="true">
       <arg value="checkout"/>
-      <arg value="master"/>
+      <arg value="stable"/>
     </exec>  
     <exec executable="git" dir="modules/lattice" failonerror="true">
       <arg value="pull"/>
     </exec>  
+    <exec executable="git" dir="modules/lattice" failonerror="true">
+      <arg value="submodule"/>
+      <arg value="update"/>
+    </exec>
   </target>
 
   <target name="test">                                                                                                
