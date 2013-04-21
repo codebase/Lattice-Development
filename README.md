@@ -1,4 +1,8 @@
-# Lattice App
+# Lattice App - DEPRECATED
 
-A complete Kohana site with the lattice module installed and configured.  Master branch is the setup used for development.  This repository can be used as a starting point for installing lattice and creating a new site.
+THIS REPOSITORY IS DEPRECATED.
+
+Please use: https://github.com/deepwinter/lattice-app
+
+Thanks!
 
