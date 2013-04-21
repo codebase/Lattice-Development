@@ -1,3 +1,4 @@
-# Kohana PHP Framework, version 3.1 (release)
+# Lattice App
 
-This is the current release version of [Kohana](http://kohanaframework.org/).
+A complete Kohana site with the lattice module installed and configured.  Master branch is the setup used for development.  This repository can be used as a starting point for installing lattice and creating a new site.
+
